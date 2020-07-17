@@ -2,9 +2,10 @@ import React from "react";
 import { Image } from "semantic-ui-react";
 import "./VideoPreview.scss";
 
-export default function VideoPreview() {
+export default function VideoPreview({ horizontal }) {
+  const horizontel = horizontal ? "horizontal" : null;
   return (
-    <div className="video-preview">
+    <div className={`video-preview ${horizontel}`}>
       <div className="image-container">
         <Image src="http://via.placeholder.com/210x118" />
         <div className="time-label">
